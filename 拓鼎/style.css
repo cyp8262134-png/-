@@ -1,0 +1,235 @@
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  color:#333;
+  background:#fff;
+  padding-top:90px;
+}
+
+/* Header */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 60px;
+  background:#f3f6fa;
+  border-bottom:1px solid #e5e5e5;
+}
+
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.logo-img{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  display:block;
+}
+
+.logo-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1.2;
+}
+
+.company{
+  font-size:32px;
+  font-weight:700;
+  color:#444;
+}
+
+.eng{
+  font-size:16px;
+  color:#888;
+  letter-spacing:2px;
+  margin-top:4px;
+}
+
+/* Nav */
+nav{
+  display:flex;
+  align-items:center;
+}
+
+nav a{
+  margin-left:36px;
+  text-decoration:none;
+  color:#666;
+  font-size:18px;
+  font-weight:500;
+  position:relative;
+  display:inline-block;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:#333;
+  transition:0.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* Banner */
+.banner{
+  height:520px;
+  background-image:url("hero.png");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+}
+
+.banner-overlay{
+  padding:30px;
+}
+
+
+.banner h1{
+  margin:0 0 16px 0;
+  font-size:48px;
+  font-weight:700;
+}
+
+.banner p{
+  margin:0;
+  font-size:20px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:24px;
+  padding:12px 28px;
+  background:#222;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  font-size:16px;
+}
+
+/* Sections */
+.about,
+.services-section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.about h2,
+.services-section h2{
+  font-size:36px;
+  margin:0 0 20px 0;
+}
+
+.about p{
+  max-width:860px;
+  margin:0 auto;
+  line-height:1.8;
+  color:#555;
+}
+
+/* Cards */
+.services{
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.card{
+  width:280px;
+  padding:28px 24px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  background:#fafafa;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h3{
+  margin:0 0 14px 0;
+  font-size:24px;
+}
+
+.card p{
+  margin:0;
+  color:#555;
+  line-height:1.6;
+}
+
+/* Footer */
+footer{
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+
+footer p{
+  margin:0;
+}
+
+/* 手機版 */
+@media (max-width: 900px){
+  header{
+    flex-direction:column;
+    gap:15px;
+    padding:16px 20px;
+  }
+
+  body{
+    padding-top:130px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  nav a{
+    margin:8px 12px;
+    font-size:16px;
+  }
+
+  .company{
+    font-size:26px;
+  }
+
+  .eng{
+    font-size:14px;
+  }
+
+  .banner{
+    height:420px;
+  }
+
+  .banner h1{
+    font-size:34px;
+  }
+
+  .banner p{
+    font-size:18px;
+  }
+}
